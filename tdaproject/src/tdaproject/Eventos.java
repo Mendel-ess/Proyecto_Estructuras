@@ -1,20 +1,36 @@
 package tdaproject;
 
 public class Eventos {
-	String Nombre,fi,ff,desc;
-	int cantAsist;
-	public Eventos(String n, String fs, String fn, int cA,String ds) {
-		Nombre = n;
-		fi = fs;
-		ff = fn;
-		cantAsist = cA;
-		desc = ds;
+	//Clase eventos
+	public String nombre;
+	public String fi;
+	public String ff;
+	public String desc;
+	public int cantAsist,horas;
+	Eventos sig=null;
+	
+	public Eventos(String fn,String ffn,String n,String d,int h, int c) {
+		fi = fn;
+		ff = ffn;
+		nombre = n;
+		desc = d;
+		horas=h;
+		cantAsist = c;
 	}
+	
+	public int getHoras() {
+		return horas;
+	}
+
+	public void setHoras(int horas) {
+		this.horas = horas;
+	}
+
 	public String getNombre() {
-		return Nombre;
+		return nombre;
 	}
-	public void setNombre(String nombre) {
-		Nombre = nombre;
+	public void setNombre(String nom) {
+		nombre = nom;
 	}
 	public String getFi() {
 		return fi;
@@ -40,4 +56,5 @@ public class Eventos {
 	public void setCantAsist(int cantAsist) {
 		this.cantAsist = cantAsist;
 	}
+	
 }
